@@ -31,24 +31,31 @@ body {
 /* Style the topnav links */
 .topnav a {
   float: left;
-  display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
 }
 
-/* Change color on hover */
+/* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #138bb9;
   color: black;
 }
 
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #ddc01e;
+  color: white;
+}
 /* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumn {
   float: left;
   width: 75%;
+  padding-right: 20px;
 }
 
 /* Right column */
@@ -56,7 +63,10 @@ body {
   float: left;
   width: 25%;
   background-color: #f1f1f1;
+  padding-top: 20px;
   padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 /* Fake image */
@@ -117,6 +127,22 @@ body {
     color: white;
 
 }
+
+.container {
+        border: 1px solid #666;
+        border-radius: 6px;
+        display: inline-block;
+        margin: 40px;
+        padding: 10px;
+}
+.icon {
+    vertical-align: middle;
+    font-size: 40px;
+}
+.text {
+        font-family: "Courier-new";
+}
+
 
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */

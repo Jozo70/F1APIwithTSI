@@ -11,37 +11,39 @@ window.onload = choosePic;
 
 /////////////////       Connecting to Fellow F1 API       \\\\\\\\\\\\\\\\\\\\\\
 
-let randCircuit = document.getElementById('f1-circuit')
+/////////////////       Connecting to Fellow F1 API       \\\\\\\\\\\\\\\\\\\\\\
 
-let myHeaders = new Headers();
-myHeaders.append("x-rapidapi-key", "97e87decb069e0485e0a2c52943b2f38");
-myHeaders.append("x-rapidapi-host", "v1.formula-1.api-sports.io");
+// 18th Aug // let randCircuit = document.getElementById('f1-circuit')
 
-let requestOptions = {
-  method: 'GET',
-  headers: myHeaders,
-  redirect: 'follow'
-};
+// 18th Aug // let myHeaders = new Headers();
+// 18th Aug // myHeaders.append("x-rapidapi-key", "97e87decb069e0485e0a2c52943b2f38");
+// 18th Aug // myHeaders.append("x-rapidapi-host", "v1.formula-1.api-sports.io");
+
+// 18th Aug // let requestOptions = {
+  // 18th Aug // method: 'GET',
+  // 18th Aug // headers: myHeaders,
+  // 18th Aug // redirect: 'follow'
+// 18th Aug // };
 
 
-fetch("https://api-formula-1.p.rapidapi.com/circuits", {
-	"method": "GET",
-	"headers": {
-        "x-rapidapi-host": "api-formula-1.p.rapidapi.com",
-		"x-rapidapi-key": "97e87decb069e0485e0a2c52943b2f38"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.log(err);
-});
+// 18th Aug // fetch("https://api-formula-1.p.rapidapi.com/circuits", {
+	// 18th Aug // "method": "GET",
+	// 18th Aug // "headers": {
+        // 18th Aug // "x-rapidapi-host": "api-formula-1.p.rapidapi.com",
+		// 18th Aug // "x-rapidapi-key": "97e87decb069e0485e0a2c52943b2f38"
+	// 18th Aug // }
+// 18th Aug // })
+// 18th Aug // .then(response => {
+	// 18th Aug // console.log(response);
+// 18th Aug // })
+// 18th Aug // .catch(err => {
+	// 18th Aug // console.log(err);
+// 18th Aug // });
 
-fetch("https://v1.formula-1.api-sports.io/circuits?")
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+// 18th Aug // fetch("https://v1.formula-1.api-sports.io/circuits?")
+  // 18th Aug // .then(response => response.text())
+  // 18th Aug // .then(result => console.log(result))
+  // 18th Aug // .catch(error => console.log('error', error));
 
 /////// Java Clock (Live Time) for enhanced user expeirience
 
@@ -137,26 +139,26 @@ function drawHand(ctx, pos, length, width) {
 
 // Another F1 API - GITHUB (https://github.com/iverly/f1-api/blob/main/README.md) //
 
-//const f1 = require('f1-api');
+const f1 = require('f1-api');
 
-//f1.getDriverInformation('russell')
-//    .then({id, code, number, firstName, lastName, birthday, nationality} => {
-//        // do some thing with data !
-//    });
+f1.getDriverInformation('russell')
+    .then({id, code, number, firstName, lastName, birthday, nationality} => {
+        // do some thing with data !
+    });
 
-//f1.getConstructorInformation('mercedes')
-//    .then({id, name, nationality} => {
-//        // do some thing with data !
-//    });
+f1.getConstructorInformation('mercedes')
+    .then({id, name, nationality} => {
+        // do some thing with data !
+    });
 
-//f1.getConstructors('2018')
-//    .then(console.log);
+f1.getConstructors('2018')
+    .then(console.log);
 
-//f1.getCurrentDriverStandings()
-//    .then(console.log)
+f1.getCurrentDriverStandings()
+    .then(console.log)
 
-//f1.getCurrentSeasonRacesSchedule()
-//    .then(console.log)
+f1.getCurrentSeasonRacesSchedule()
+    .then(console.log)
 
 /////////////////       Kanye's Quotes (Tutorial)       \\\\\\\\\\\\\\\\\\\\\\
 let quotesDiv = document.getElementById('quotes')
