@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title> Best Website Winner of 1993,1994 and 1996</title>
+    <script defer src="index.js" charset="utf-8"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://public.radio.co/playerapi/jquery.radiocoplayer.min.js"></script>
+    <script src="https://github.com/iverly/f1-api/blob/main/examples/driver.js"></script>
+    <link rel="stylesheet" href="sexy.css">
+</head>
+
+<body onload="startTime()">
+
+    <div class="F1Banner">
+        <div class="center-right">
+        <img src="images/Logo.png" width="50%" id="web-logo" alt="F1 API With TSI">
+        </div>
+         <!-- Will Display a banner image randomly selected via my Javscript file -->
+        <img src="images/" width="100%" id="f1-banner" alt="Random F1 Banner">
+
+    </div>
+
+
+    <nav>
+        <!-- Below is the Nav bar situated at the top -->
+        <div class="topnav">
+          <a class="active" href="index.html">Home</a>
+          <a href="game.html">Bored? Play This!</a>
+          <a href="search.html">Search</a>
+          <!-- <a href="#about">About</a> -->
+        </div>
+    </nav>
+
+
+    <aside>
+
+    </aside>
+
+
+        <!-- Live Clock  -->
+
+        <canvas id="canvas" width="200" height="200" style="background-color:#FFA07A"></canvas>
+
+
+    <!-- F1 API ATTEMPT -->
+    <div id="f1-circuit">
+    <h1> Featured F1 Circuit:</h1>
+    <!-- Should Display a randomly recieved circuit from F1 API -->
+    </div>
+
+
+     <!-- Attempt to make a Radio Player -->
+    <script>$('.radioplayer').radiocoPlayer();</script>
+
+
+
+    <div id="quotes">
+        <!-- This is a comment, I will place quotes within this div -->
+    </div><br>
+
+    <button id= "gib-cat"> Get Me One of them Cats</button>
+
+    <div id="catto-picco">
+        <!-- another comment, I will place quotes within this div -->
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>
