@@ -11,8 +11,6 @@ window.onload = choosePic;
 
 /////////////////       Connecting to Fellow F1 API       \\\\\\\\\\\\\\\\\\\\\\
 
-/////////////////       Connecting to Fellow F1 API       \\\\\\\\\\\\\\\\\\\\\\
-
 // 18th Aug // let randCircuit = document.getElementById('f1-circuit')
 
 // 18th Aug // let myHeaders = new Headers();
@@ -47,12 +45,14 @@ window.onload = choosePic;
 
 /////// Java Clock (Live Time) for enhanced user expeirience
 
-        var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var radius = canvas.height / 2;
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
+let radius = canvas.height / 2;
 ctx.translate(radius, radius);
 radius = radius * 0.90
 setInterval(drawClock, 1000);
+
+setInterval(() => console.log(new Date().toLocaleTimeString()),1000);
 
 function drawClock() {
   drawFace(ctx, radius);
@@ -61,7 +61,7 @@ function drawClock() {
 }
 
 function drawFace(ctx, radius) {
-  var grad;
+  let grad;
   ctx.beginPath();
   ctx.arc(0, 0, radius, 0, 2*Math.PI);
   ctx.fillStyle = 'white';
@@ -128,7 +128,7 @@ function drawHand(ctx, pos, length, width) {
 }
 
 
-
+///////   Text Clock
 
 
 
@@ -139,20 +139,20 @@ function drawHand(ctx, pos, length, width) {
 
 // Another F1 API - GITHUB (https://github.com/iverly/f1-api/blob/main/README.md) //
 
-const f1 = require('f1-api');
+const f1 = 'https://github.com/iverly/f1-api'; //const f1 = 'f1-api';
 
-f1.getDriverInformation('russell')
-    .then({id, code, number, firstName, lastName, birthday, nationality} => {
-        // do some thing with data !
-    });
+//f1.getDriverInformation('russell')
+//    .then(id, code, number, firstName, lastName, birthday, nationality => {
+//        // do some thing with data !
+//    });
 
-f1.getConstructorInformation('mercedes')
-    .then({id, name, nationality} => {
-        // do some thing with data !
-    });
+//f1.getConstructorInformation('mercedes')
+//    .then(id, name, nationality => {
+//        // do some thing with data !
+//    });
 
-f1.getConstructors('2018')
-    .then(console.log);
+f1.getCurrentConstructorStandings()
+    .then(console.log)
 
 f1.getCurrentDriverStandings()
     .then(console.log)
